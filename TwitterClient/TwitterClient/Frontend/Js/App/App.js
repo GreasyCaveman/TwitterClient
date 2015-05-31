@@ -1,7 +1,7 @@
 ﻿(function ($) {
     app = {
         init: function () {
-            app.TwitterHandler.init();
+            app.twitterHandler.init();
         }
     };
     $(document).ready(function () {
@@ -11,22 +11,29 @@
 
 
 (function (app, $) {
-    app.TwitterHandler = {
-       
-        getTweetsSuccess: function (data) {
-            var $data = $(data);
+    app.twitterHandler = {
+        getTweetsSuccess: function(data) {
+            var $data = $(data),
+            generatedHtml;
             var $twitterFeedContainer = $('#twitterFeedContainer');
             if ($data && $data.length > 0 && $twitterFeedContainer.length > 0) {
                 $data.each(function() {
-                    $twitterFeedContainer.append('<div class="tweet"><img src="' + this.user.profile_image_url + '" /><span class="username">' + this.user.name + '</span><span class="screenname">' + this.user.screen_name + '</span><span class="retweetcount">' + this.retweet_count + '</span><p class="tweetcontent">' + this.text + '</p></div>');
+                    generatedHtml += '<div class="tweet"><img src="' + this.user.profile_image_url + '" /><span class="username">' + this.user.name + '</span><span class="screenname">' + this.user.screen_name + '</span><span class="retweetcount">' + this.retweet_count + '</span><p class="tweetcontent">' + this.text + '</p></div>';
                 });
+                $twitterFeedContainer.html(generatedHtml);
+                $('#twitterFeedControlsContainer').show();
             }
         },
-        getTweetsFail: function () {
+        getTweetsFail: function() {
             var $twitterFeedContainer = $('#twitterFeedContainer');
             if ($twitterFeedContainer.length > 0) {
-                $twitterFeedContainer.append('<div class="error"><span class="errormessage">Couldn\'t get tweets</span></div>');
+                $twitterFeedContainer.html('<div class="error"><span class="errormessage">Couldn\'t get tweets</span></div>');
             }
+        },
+        resetMatchedTweets: function() {
+            var $twitterFeedContainer = $('#twitterFeedContainer');
+            var $tweetsMatched = $twitterFeedContainer.find('.tweet.match');
+            $tweetsMatched.each(function() { $(this).removeClass('match'); });
         },
         getTweets: function() {
             var $twitterFeedContainer = $('#twitterFeedContainer');
@@ -36,29 +43,40 @@
                 url: "http://localhost:8080/TwitterService/twitter/gettweets",
                 success: this.getTweetsSuccess,
                 fail: this.getTweetsFail,
-                data: ajaxData
+                data: ajaxData,
+                dataType: 'json'
             });
         },
-        searchTweets: function() {
+        searchTweets: function () {
+            this.resetMatchedTweets();
             var $twitterFeedContainer = $('#twitterFeedContainer'),
-            searchInputVal = $('#searchbox') ? $('#searchbox').val() : ""; 
+                searchInputVal = $('#searchbox') ? $('#searchbox').val().toLowerCase() : "";
             if ($twitterFeedContainer.length > 0 && searchInputVal !== "") {
-                
+
                 var $tweets = $($twitterFeedContainer.find('.tweet'));
                 if ($tweets.length > 0) {
                     $tweets.each(function() {
                         var $tweet = $(this);
-                        var searchableVal = $tweet.find(".tweetcontent").text();
-                        if (searchableVal.substr(searchInputVal) > -1) {
-                            $tweet.append('<span class="match"></span>');
+                        var searchableVal = $tweet.find(".tweetcontent").text().toLowerCase();
+                        if (searchableVal.indexOf(searchInputVal) > -1) {
+                            $tweet.addClass('match');
                         }
                     });
                 }
             }
         },
+        bindEvents: function () {
+            $('#submitSearch').click(function () {
+                app.twitterHandler.searchTweets();
+            });
+            this.StartTweetRefresh();
+        },
+        StartTweetRefresh: function() {
+            setInterval(this.getTweets, 100000);
+        },
         init: function () {
             this.getTweets();
-            $(window).on('click', '#submitSearch', function() { this.getTweets() });
+            this.bindEvents();
         }
         
 

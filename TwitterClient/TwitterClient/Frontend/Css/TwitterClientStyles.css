@@ -12,25 +12,22 @@ body.test {
     margin: 0 auto;
 }
 
-#close {
+#loading {
     font-family: sans-serif;
     position: absolute;
     display: block;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-    color: #a7a7a8;
-}
-.tweet {
-    background-color: #fff;
-}
-#close:hover{
+    top: 50%;
+    text-align: center;
     color: #fff;
 }
 
-#close:before {
-    content: 'X';
-    font-size: 20px;
+.tweet {
+    background-color: #fff;
+    opacity: .55;
+}
+
+.tweet.match {
+    opacity: 1;
 }
 
 #twitterFeedContainer, #twitterFeedControlsContainer {

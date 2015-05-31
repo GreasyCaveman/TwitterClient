@@ -9,13 +9,12 @@
 </head>
 <body>
 <div id="componentWrapper">
-    <span id="close" >X</span>
     <div id="twitterFeedContainer" data-count="10" data-screenname="salesforce">
-
+        <div id="loading">Loading</div>
     </div>
-    <div id="twitterFeedControlsContainer">
+    <div id="twitterFeedControlsContainer" style="display: none;">
         <input type="text" name="searchbox" id="searchbox"/>
-        <input type="button" id="submitSearch"/>
+        <input type="button" id="submitSearch" value="Search Tweets" name="submitSearch"/>
     </div>
 </div>
     <script type="text/javascript" src="../Js/App/App.js"></script>

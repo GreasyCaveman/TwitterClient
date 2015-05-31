@@ -1,4 +1,6 @@
-﻿namespace TwitterClient.Presentation.Frontend
+﻿using WebKit;
+
+namespace TwitterClient.Presentation.Frontend
 {
     partial class DisplayContainer
     {
@@ -28,24 +30,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TwitterClientBrowser = new System.Windows.Forms.WebBrowser();
+            this.TwitterClientBrowser = new WebKit.WebKitBrowser();
             this.SuspendLayout();
             // 
             // TwitterClientBrowser
             // 
+            this.TwitterClientBrowser.AllowDownloads = false;
             this.TwitterClientBrowser.AllowNavigation = false;
-            this.TwitterClientBrowser.AllowWebBrowserDrop = false;
-            this.TwitterClientBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TwitterClientBrowser.AllowNewWindows = false;
+            this.TwitterClientBrowser.BackColor = System.Drawing.Color.White;
             this.TwitterClientBrowser.IsWebBrowserContextMenuEnabled = false;
-            this.TwitterClientBrowser.Location = new System.Drawing.Point(0, 0);
+            this.TwitterClientBrowser.Location = new System.Drawing.Point(-1, 0);
             this.TwitterClientBrowser.Margin = new System.Windows.Forms.Padding(0);
-            this.TwitterClientBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.TwitterClientBrowser.Name = "TwitterClientBrowser";
-            this.TwitterClientBrowser.ScrollBarsEnabled = false;
-            this.TwitterClientBrowser.Size = new System.Drawing.Size(617, 537);
+            this.TwitterClientBrowser.Size = new System.Drawing.Size(618, 538);
             this.TwitterClientBrowser.TabIndex = 0;
-            this.TwitterClientBrowser.WebBrowserShortcutsEnabled = false;
-            this.TwitterClientBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            this.TwitterClientBrowser.Url = null;
             // 
             // DisplayContainer
             // 
@@ -62,7 +62,8 @@
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser TwitterClientBrowser;
+        private WebKitBrowser TwitterClientBrowser;
+
     }
 }
 
