@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClient.Presentation", "TwitterClient\TwitterClient.Presentation.csproj", "{CC9A1384-9B2B-4D03-8DCC-891B05E4261B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.RestService", "TwitterRestService\Twitter.RestService.csproj", "{A4539393-6CFC-447A-86C3-3002D4F43F5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClient.Webservice", "TwitterWebservice\TwitterClient.Webservice.csproj", "{1074AFDE-3A8A-4D07-9017-350E4D1B7942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClient.Business", "Twitterclient.business\TwitterClient.Business.csproj", "{4E79B3FD-550C-438C-9A33-70883EB831DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClient.Host", "TwitterServiceHost\TwitterClient.Host.csproj", "{B466E5F3-4EAE-4828-8B32-0CB7E614B182}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1074AFDE-3A8A-4D07-9017-350E4D1B7942} = {1074AFDE-3A8A-4D07-9017-350E4D1B7942}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC9A1384-9B2B-4D03-8DCC-891B05E4261B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9A1384-9B2B-4D03-8DCC-891B05E4261B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9A1384-9B2B-4D03-8DCC-891B05E4261B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9A1384-9B2B-4D03-8DCC-891B05E4261B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4539393-6CFC-447A-86C3-3002D4F43F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4539393-6CFC-447A-86C3-3002D4F43F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4539393-6CFC-447A-86C3-3002D4F43F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4539393-6CFC-447A-86C3-3002D4F43F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1074AFDE-3A8A-4D07-9017-350E4D1B7942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1074AFDE-3A8A-4D07-9017-350E4D1B7942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1074AFDE-3A8A-4D07-9017-350E4D1B7942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1074AFDE-3A8A-4D07-9017-350E4D1B7942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E79B3FD-550C-438C-9A33-70883EB831DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E79B3FD-550C-438C-9A33-70883EB831DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E79B3FD-550C-438C-9A33-70883EB831DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E79B3FD-550C-438C-9A33-70883EB831DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B466E5F3-4EAE-4828-8B32-0CB7E614B182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B466E5F3-4EAE-4828-8B32-0CB7E614B182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B466E5F3-4EAE-4828-8B32-0CB7E614B182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B466E5F3-4EAE-4828-8B32-0CB7E614B182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
