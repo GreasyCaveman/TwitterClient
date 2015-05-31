@@ -1,0 +1,45 @@
+﻿body
+{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+}
+body.test {
+    background-color: #800000;
+}
+#componentWrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#close {
+    font-family: sans-serif;
+    position: absolute;
+    display: block;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: #a7a7a8;
+}
+.tweet {
+    background-color: #fff;
+}
+#close:hover{
+    color: #fff;
+}
+
+#close:before {
+    content: 'X';
+    font-size: 20px;
+}
+
+#twitterFeedContainer, #twitterFeedControlsContainer {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 5px 15px;
+}
+#twitterFeedContainer {
+    overflow: hidden;
+}
