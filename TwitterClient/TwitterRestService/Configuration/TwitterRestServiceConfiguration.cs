@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Twitter.RestService.TwitterRestServiceConfiguration
+namespace Twitter.RestService.Configuration
 {
     class TwitterRestServiceConfiguration : ConfigurationSection
     {

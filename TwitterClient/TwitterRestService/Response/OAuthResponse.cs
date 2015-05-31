@@ -8,7 +8,6 @@ using RestSharp;
 
 namespace Twitter.RestService.Response
 {
-    //"{\"token_type\":\"bearer\",\"access_token\":\"AAAAAAAAAAAAAAAAAAAAAPHPfwAAAAAA7Ch7xVGYVYlscip1CXxFBkfWd6c%3DkbJbjyw7Riq3JAqb3S7T6xi9iPtIfEkcUd0EPpNxXgzfv5mMHw\"}"
     public interface IOAuthResponse
     {
         string token_type { get; set; }

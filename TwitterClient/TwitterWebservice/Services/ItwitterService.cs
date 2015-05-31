@@ -1,7 +1,8 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using TwitterWebservice.DataObjects;
+using Twitter.RestService.DataObjects;
 
 namespace TwitterClient.Webservice.Services
 {
@@ -14,6 +15,6 @@ namespace TwitterClient.Webservice.Services
             BodyStyle = WebMessageBodyStyle.Bare,
             UriTemplate = "twitter/gettweets")]
         [Description("get tweets from twitter Rest service")]
-        Tweet GetTweets();
+        List<Tweet> GetTweets();
     }
 }

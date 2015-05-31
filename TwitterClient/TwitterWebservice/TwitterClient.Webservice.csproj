@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataObjects\Tweet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ItwitterService.cs" />
     <Compile Include="Services\TwitterService.cs" />
@@ -52,6 +51,10 @@
     <ProjectReference Include="..\Twitterclient.business\TwitterClient.Business.csproj">
       <Project>{4E79B3FD-550C-438C-9A33-70883EB831DF}</Project>
       <Name>TwitterClient.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitterRestService\Twitter.RestService.csproj">
+      <Project>{A4539393-6CFC-447A-86C3-3002D4F43F5D}</Project>
+      <Name>Twitter.RestService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

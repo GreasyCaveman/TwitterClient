@@ -43,14 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="TwitterRestServiceClient.cs" />
     <Compile Include="DataObjects\Tweet.cs" />
     <Compile Include="DataObjects\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Response\GetTweetsResponse.cs" />
     <Compile Include="Response\OAuthResponse.cs" />
-    <Compile Include="TwitterRestServiceClient.cs" />
-    <Compile Include="TwitterRestServiceConfiguration\TwitterRestServiceConfiguration.cs" />
+    <Compile Include="Configuration\TwitterRestServiceConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
