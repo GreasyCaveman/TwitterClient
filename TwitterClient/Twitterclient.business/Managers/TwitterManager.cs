@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Twitter.RestService.DataObjects;
 using TwitterRestService;
 
-namespace TwitterClient.Managers
+namespace TwitterClient.Business.Managers
 {
     public class TwitterManager
     {
-        private TwitterRestService.TwitterRestServiceClient _TwitterService { get; set; }
-
-        public TwitterRestService.TwitterRestServiceClient TwitterService
+        //singleton instance of twitter rest service client
+        private TwitterRestServiceClient _TwitterService { get; set; }
+        public TwitterRestServiceClient TwitterService
         {
             get { return _TwitterService ?? new TwitterRestServiceClient(); }
             private set { _TwitterService = value; }
@@ -25,6 +21,7 @@ namespace TwitterClient.Managers
 
         public List<Tweet> GetTweets(int count, string screenName)
         {
+           //get list of tweets from twitter rest service
            return TwitterService.GetTweets(count,screenName);
         }
     }

@@ -58,15 +58,15 @@
       <Project>{4e79b3fd-550c-438c-9a33-70883eb831df}</Project>
       <Name>TwitterClient.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TwitterClient\TwitterClient.Presentation.csproj">
+    <ProjectReference Include="..\TwitterClient.Presentation\TwitterClient.Presentation.csproj">
       <Project>{cc9a1384-9b2b-4d03-8dcc-891b05e4261b}</Project>
       <Name>TwitterClient.Presentation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TwitterRestService\Twitter.RestService.csproj">
+    <ProjectReference Include="..\Twitter.RestService\Twitter.RestService.csproj">
       <Project>{a4539393-6cfc-447a-86c3-3002d4f43f5d}</Project>
       <Name>Twitter.RestService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TwitterWebservice\TwitterClient.Webservice.csproj">
+    <ProjectReference Include="..\TwitterClient.Webservice\TwitterClient.Webservice.csproj">
       <Project>{1074AFDE-3A8A-4D07-9017-350E4D1B7942}</Project>
       <Name>TwitterClient.Webservice</Name>
     </ProjectReference>

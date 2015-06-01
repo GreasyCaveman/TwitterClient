@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC9A1384-9B2B-4D03-8DCC-891B05E4261B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitterClient.Presentation</RootNamespace>
+    <AssemblyName>TwitterClient.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebKitBrowser, Version=0.5.0.0, Culture=neutral, PublicKeyToken=b967213f6d29a3be, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Webkit\WebKit.NET-0.5-bin-cairo\bin\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DisplayContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayContainer.Designer.cs">
+      <DependentUpon>DisplayContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterClientPresentation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DisplayContainer.resx">
+      <DependentUpon>DisplayContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\CFLite.resources\CFCharacterSetBitmaps.bitmap" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\CFLite.resources\CFUniCharPropertyDatabase.data" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\CFLite.resources\CFUnicodeData-L.mapping" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\CFLite.resources\Info.plist" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\JavaScriptCore.resources\Info.plist" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\certificates\cacert.pem" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\en.lproj\Localizable.strings" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\Info.plist" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceCSSTokenizer.re2js" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceHTMLTokenizer.re2js" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceJavaScriptTokenizer.re2js" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\WebKit.qrc" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKitBrowser.dll.manifest" />
+    <None Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\docs\WebKit .NET API Reference.chm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Frontend\Js\Tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Frontend\Css\TwitterClientStyles.css" />
+    <Content Include="Frontend\Html\TwitterClientUi.html" />
+    <Content Include="Frontend\Js\App\App.js" />
+    <Content Include="Frontend\Js\Frameworks\jquery-1.11.3.min.js" />
+    <Content Include="Frontend\Js\Frameworks\jasmine\boot.js" />
+    <Content Include="Frontend\Js\Frameworks\jasmine\console.js" />
+    <Content Include="Frontend\Js\Frameworks\jasmine\jasmine-html.js" />
+    <Content Include="Frontend\Js\Frameworks\jasmine\jasmine.css" />
+    <Content Include="Frontend\Js\Frameworks\jasmine\jasmine.js" />
+    <Content Include="Frontend\Js\Frameworks\jasmine\jasmine_favicon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\CFLite.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\icudt40.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\icuin40.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\icuuc40.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\JavaScriptCore.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\libcurl.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\libeay32.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\libexslt.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\libxml2.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\libxslt.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\objc.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\pthreadVC2.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\SQLite3.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\ssleay32.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.Interop.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\en.lproj\localizedStrings.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\AbstractTimelinePanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ApplicationCacheItemsView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\AuditCategories.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\AuditLauncherView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\AuditResultView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\AuditRules.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\audits.css" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\AuditsPanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\BottomUpProfileDataGridTree.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\BreakpointManager.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\BreakpointsSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Callback.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\CallStackSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ChangesView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Checkbox.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Color.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ConsolePanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ConsoleView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ContextMenu.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\CookieItemsView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\CSSCompletions.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\CSSStyleModel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Database.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\DatabaseQueryView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\DatabaseTableView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\DataGrid.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\DOMAgent.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\DOMStorage.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\DOMStorageItemsView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\DOMSyntaxHighlighter.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Drawer.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ElementsPanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ElementsTreeOutline.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\EventListenersSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\FontView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\HAREntry.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\helpScreen.css" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\HelpScreen.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\applicationCache.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\auditsIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\back.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\breakpointBorder.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\breakpointConditionalBorder.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\breakpointConditionalCounterBorder.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\breakpointCounterBorder.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\breakpointsActivateButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\breakpointsDeactivateButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\checker.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\clearConsoleButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\closeButtons.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\consoleButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\consoleIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\cookie.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\database.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\databaseTable.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\debuggerContinue.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\debuggerPause.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\debuggerStepInto.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\debuggerStepOut.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\debuggerStepOver.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallDown.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallDownBlack.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallDownWhite.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallRight.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallRightBlack.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallRightDown.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallRightDownBlack.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallRightDownWhite.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\disclosureTriangleSmallRightWhite.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\dockButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\elementsIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\enableOutlineButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\enableSolidButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\errorIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\errorMediumIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\errorRedDot.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\excludeButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\focusButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\forward.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\gearButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\glossyHeader.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\glossyHeaderPressed.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\glossyHeaderSelected.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\glossyHeaderSelectedPressed.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\goArrow.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\graphLabelCalloutLeft.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\graphLabelCalloutRight.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\grayConnectorPoint.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\largerResourcesButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\localStorage.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\nodeSearchButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\paneBottomGrow.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\paneBottomGrowActive.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\paneGrowHandleLine.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\paneSettingsButtons.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\pauseOnExceptionButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\percentButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\popoverArrows.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\popoverBackground.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\profileGroupIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\profileIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\profilesIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\profileSmallIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\profilesSilhouette.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\programCounterBorder.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\radioDot.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\recordButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\recordToggledButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\reloadButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourceCSSIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourceDocumentIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourceDocumentIconSmall.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourceJSIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourcePlainIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourcePlainIconSmall.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourcesIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourcesSilhouette.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourcesSizeGraphIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\resourcesTimeGraphIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\scriptsIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\scriptsSilhouette.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\searchSmallBlue.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\searchSmallBrightBlue.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\searchSmallGray.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\searchSmallWhite.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\segment.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\segmentEnd.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\segmentHover.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\segmentHoverEnd.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\segmentSelected.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\segmentSelectedEnd.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\sessionStorage.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\spinner.gif" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\splitviewDimple.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\splitviewDividerBackground.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\statusbarBackground.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\statusbarBottomBackground.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\statusbarButtons.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\statusbarMenuButton.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\statusbarMenuButtonSelected.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\statusbarResizerHorizontal.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\statusbarResizerVertical.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\storageIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\successGreenDot.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\thumbActiveHoriz.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\thumbActiveVert.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\thumbHoriz.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\thumbHoverHoriz.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\thumbHoverVert.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\thumbVert.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineBarBlue.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineBarGray.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineBarGreen.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineBarOrange.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineBarPurple.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineBarRed.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineBarYellow.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineCheckmarks.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineDots.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineHollowPillBlue.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineHollowPillGray.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineHollowPillGreen.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineHollowPillOrange.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineHollowPillPurple.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineHollowPillRed.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineHollowPillYellow.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelineIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelinePillBlue.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelinePillGray.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelinePillGreen.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelinePillOrange.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelinePillPurple.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelinePillRed.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\timelinePillYellow.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\toolbarItemSelected.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\trackHoriz.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\trackVert.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\treeDownTriangleBlack.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\treeDownTriangleWhite.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\treeRightTriangleBlack.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\treeRightTriangleWhite.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\treeUpTriangleBlack.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\treeUpTriangleWhite.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\undockButtonGlyph.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\userInputIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\userInputPreviousIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\userInputResultIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\warningIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\warningMediumIcon.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\warningOrangeDot.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\warningsErrors.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Images\whiteConnectorPoint.png" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ImageView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\InjectedFakeWorker.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\InjectedScript.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\InjectedScriptAccess.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\inspector.css" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\inspector.html" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\inspector.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\InspectorBackendStub.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\InspectorFrontendHostStub.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\inspectorSyntaxHighlight.css" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\KeyboardShortcut.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\MetricsSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Object.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ObjectPropertiesSection.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ObjectProxy.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Panel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\PanelEnablerView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Placard.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\popover.css" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Popover.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ProfileDataGridTree.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ProfilesPanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ProfileView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\PropertiesSection.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\PropertiesSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Resource.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ResourceCategory.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ResourcesPanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ResourceView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ScopeChainSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Script.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ScriptsPanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ScriptView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Section.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\Settings.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\ShortcutsHelp.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SidebarTreeElement.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceCSSTokenizer.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceFrame.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceHTMLTokenizer.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceJavaScriptTokenizer.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceTokenizer.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SourceView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\StatusBarButton.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\StoragePanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\StylesSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\SummaryBar.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TabbedPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TestController.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TextEditorHighlighter.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TextEditorModel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TextPrompt.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\textViewer.css" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TextViewer.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TimelineAgent.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TimelineGrid.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TimelineOverviewPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TimelinePanel.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\TopDownProfileDataGridTree.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\treeoutline.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\utilities.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\View.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\WatchExpressionsSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\WelcomeView.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKit.resources\inspector\WorkersSidebarPane.js" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKitBrowser.dll" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\bin\WebKitBrowserTest.exe" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\LICENSE.txt" />
+    <Content Include="WebkitDotNet\WebKit.NET-0.5-bin-cairo\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Twitter.RestService\Twitter.RestService.csproj">
+      <Project>{a4539393-6cfc-447a-86c3-3002d4f43f5d}</Project>
+      <Name>Twitter.RestService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

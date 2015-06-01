@@ -41,10 +41,9 @@
   <ItemGroup>
     <Compile Include="Managers\TwitterManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Security\StringEncryptorDecryptor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TwitterRestService\Twitter.RestService.csproj">
+    <ProjectReference Include="..\Twitter.RestService\Twitter.RestService.csproj">
       <Project>{a4539393-6cfc-447a-86c3-3002d4f43f5d}</Project>
       <Name>Twitter.RestService</Name>
     </ProjectReference>

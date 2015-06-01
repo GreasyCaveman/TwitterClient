@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
-using System.Threading.Tasks;
 using TwitterClient.Webservice.Services;
 using TwitterServiceHost;
 
+//WCF service host. This code is for twitterservice self host used for ajax calls.
 namespace TwitteClient.Host.WcfServiceHost
 {
     public class WcfServiceHost
@@ -20,11 +16,13 @@ namespace TwitteClient.Host.WcfServiceHost
             
                 try
                 {
-                    // Step 2 Start the service.
+                    //Host wcfService
                     selfHost.Open();
+                    //trap thread while program is running
                     while (Program.isRunning)
                     {
                     }
+                    //close service
                     selfHost.Close();
                 }
                 catch (CommunicationException ce)

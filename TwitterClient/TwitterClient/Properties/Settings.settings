@@ -1,9 +1,0 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TwitterClient.Properties" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="HtmlFileLocation" Description="The location of the html file for tweet display" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Dev\TwitterClient\TwitterClient\TwitterClient\TwitterClient\Frontend\Html\TwitterClientUi.html</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>
