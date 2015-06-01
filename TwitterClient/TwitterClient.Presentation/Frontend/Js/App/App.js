@@ -41,7 +41,7 @@
             var ajaxData = $twitterFeedContainer ? { 'count': $twitterFeedContainer.data('count'), 'screenname': $twitterFeedContainer.data('screenname') } : {}
             $.ajax({
                 method: "GET",
-                url: "http://localhost:8080/TwitterService/twitter/gettweets",
+                url: "http://localhost:1337/TwitterService/twitter/gettweets",
                 success: this.getTweetsSuccess,
                 fail: this.getTweetsFail,
                 data: ajaxData,
